@@ -158,9 +158,9 @@ Here are the results of the prediction:
 | Speed limit (50km/h)  | Speed limit (50km/h)   									|
 | General caution 			| General caution								|
 | Right-of-way at the next intersection| Right-of-way at the next intersection |
-| General caution | Yield |
+| General caution | Right-of-way at the next intersection |
 | Go straight or right| Priority road |
-|Roundabout mandatory|Stop|
+|Roundabout mandatory|Road work|
 
 
 The model was able to correctly guess 3 of the 6 traffic signs, which gives an accuracy of 50%. First half of the images is somewhat resembles to test set. So we can say the accuracy is favorable. Second half of the images is very mush different to test set. I think I need to augment training set with translation and scaling to make classification works.
@@ -169,15 +169,64 @@ The model was able to correctly guess 3 of the 6 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 13th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+*I couldn't figure out why my results are relatively big numbers, not below 1.*
+
+For the first image, the model is relatively sure that this is a Speed limit (50km/h) sign (probability of 85), and the image does contain a gSpeed limit (50km/h) sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| .60         			| Stop sign   									|
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 85.45128632         	|Speed limit (50km/h)|
+| 30.60815048     			|Wild animals crossing|
+| 28.33760452				    |Speed limit (30km/h)|
+| 14.92870998	      		|Speed limit (80km/h)|
+| -0.17537288				    |Speed limit (60km/h)|
 
+For the second image, the model is relatively sure that this is a general caution sign (probability of 111), and the image does contain a general caution sign. The top five soft max probabilities were
 
-For the second image ...
+| Probability         	|     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+|111.94968414| General caution|
+|52.3482132| Pedestrians|
+|40.1158905| Right-of-way at the next intersection|
+|27.73794937| Road work|
+|22.26135063| Keep right|
+
+For the third image, the model is relatively sure that this is a Right-of-way at the next intersection sign (probability of 65), and the image does contain a Right-of-way at the next intersection sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+|65.38359833|Right-of-way at the next intersection|
+| 8.47878456|Roundabout mandatory|
+|3.60774255|Traffic signals|
+|3.5506916|Beware of ice/snow|
+|1.94609737|Slippery road|
+
+For the fourth image, the model is relatively not sure that this is a Right-of-way at the next intersection sign (probability of 22), and the image does contain a Right-of-way at the next intersection sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+|22.4647522|Right-of-way at the next intersection|
+|10.27308369|Ahead only|
+|7.05428839|Roundabout mandatory|
+|3.20513678|Children crossing|
+|1.49114037|Speed limit (100km/h)|
+
+For the fifth image, the model is relatively not sure that this is a Priority road sign (probability of 36), and the image does contain a Priority road sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+|36.53054428|Priority road|
+|26.76468468|Ahead only|
+|25.35012245|No passing|
+|14.84806919|Roundabout mandatory|
+|13.13069916|No entry|
+
+For the sixth image, the model is relatively not sure that this is a Road work sign (probability of 42), and the image does contain a Road work sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+|42.82881927|Road work|
+|28.9650116|Stop|
+|8.89744282|Yield|
+|6.45120382|Keep right|
+|5.39219475|Beware of ice/snow|
