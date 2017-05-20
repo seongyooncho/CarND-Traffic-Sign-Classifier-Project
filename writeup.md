@@ -171,62 +171,62 @@ The code for making predictions on my final model is located in the 13th cell of
 
 *I couldn't figure out why my results are relatively big numbers, not below 1.*
 
-For the first image, the model is relatively sure that this is a Speed limit (50km/h) sign (probability of 85), and the image does contain a gSpeed limit (50km/h) sign. The top five soft max probabilities were
+For the first image, the model is sure that this is a Speed limit (50km/h) sign (probability of 1.00), and the image does contain a gSpeed limit (50km/h) sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-| 85.45128632         	|Speed limit (50km/h)|
-| 30.60815048     			|Wild animals crossing|
-| 28.33760452				    |Speed limit (30km/h)|
-| 14.92870998	      		|Speed limit (80km/h)|
-| -0.17537288				    |Speed limit (60km/h)|
+| 1.00|Speed limit (50km/h)|
+| 0.00|Wild animals crossing|
+| 0.00|Speed limit (30km/h)|
+| 0.00|Speed limit (80km/h)|
+| 0.00|Speed limit (60km/h)|
 
-For the second image, the model is relatively sure that this is a general caution sign (probability of 111), and the image does contain a general caution sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					|
-|:---------------------:|:---------------------------------------------:|
-|111.94968414| General caution|
-|52.3482132| Pedestrians|
-|40.1158905| Right-of-way at the next intersection|
-|27.73794937| Road work|
-|22.26135063| Keep right|
-
-For the third image, the model is relatively sure that this is a Right-of-way at the next intersection sign (probability of 65), and the image does contain a Right-of-way at the next intersection sign. The top five soft max probabilities were
+For the second image, the model is sure that this is a general caution sign (probability of 1.00), and the image does contain a general caution sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-|65.38359833|Right-of-way at the next intersection|
-| 8.47878456|Roundabout mandatory|
-|3.60774255|Traffic signals|
-|3.5506916|Beware of ice/snow|
-|1.94609737|Slippery road|
+|1.00| General caution|
+|0.00| Pedestrians|
+|0.00| Right-of-way at the next intersection|
+|0.00| Road work|
+|0.00| Keep right|
 
-For the fourth image, the model is relatively not sure that this is a Right-of-way at the next intersection sign (probability of 22), and the image does contain a Right-of-way at the next intersection sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					|
-|:---------------------:|:---------------------------------------------:|
-|22.4647522|Right-of-way at the next intersection|
-|10.27308369|Ahead only|
-|7.05428839|Roundabout mandatory|
-|3.20513678|Children crossing|
-|1.49114037|Speed limit (100km/h)|
-
-For the fifth image, the model is relatively not sure that this is a Priority road sign (probability of 36), and the image does contain a Priority road sign. The top five soft max probabilities were
+For the third image, the model is sure that this is a Right-of-way at the next intersection sign (probability of 1.00), and the image does contain a Right-of-way at the next intersection sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-|36.53054428|Priority road|
-|26.76468468|Ahead only|
-|25.35012245|No passing|
-|14.84806919|Roundabout mandatory|
-|13.13069916|No entry|
+|1.00|Right-of-way at the next intersection|
+|0.00|Roundabout mandatory|
+|0.00|Traffic signals|
+|0.00|Beware of ice/snow|
+|0.00|Slippery road|
 
-For the sixth image, the model is relatively not sure that this is a Road work sign (probability of 42), and the image does contain a Road work sign. The top five soft max probabilities were
+For the fourth image, the model is relatively sure that this is a Right-of-way at the next intersection sign (probability of 0.82), but the image does not contain a Right-of-way at the next intersection sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
-|42.82881927|Road work|
-|28.9650116|Stop|
-|8.89744282|Yield|
-|6.45120382|Keep right|
-|5.39219475|Beware of ice/snow|
+|0.82|Right-of-way at the next intersection|
+|0.12|Ahead only|
+|0.02|Roundabout mandatory|
+|0.01|Children crossing|
+|0.01|Speed limit (100km/h)|
+
+For the fifth image, the model is sure that this is a Priority road sign (probability of 1.00), but the image does not contain a Priority road sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+|1.00|Priority road|
+|0.00|Ahead only|
+|0.00|No passing|
+|0.00|Roundabout mandatory|
+|0.00|No entry|
+
+For the sixth image, the model is  sure that this is a Road work sign (probability of 1.00), but the image does not contain a Road work sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+|1.00|Road work|
+|0.00|Stop|
+|0.00|Yield|
+|0.00|Keep right|
+|0.00|Beware of ice/snow|
